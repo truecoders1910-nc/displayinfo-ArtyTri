@@ -6,15 +6,35 @@ namespace DisplayInfo
     {
         static void Main(string[] args)
         {
-            // Get first and last name from user input
-            // Get their favorite number
-            // Get their favorite animal
+            int favnumb;
+            string fname;
+            string lname;
+            string favan;
 
-            // Once you have gotten all their info and stored it,
-            // display it back to them.
+            Console.WriteLine("What is your first name?");
+            fname = Console.ReadLine();
 
-            // If their favorite number is greater than 10, display it in green.
-            // If their favorite number is less than 5, display it in red.
+            Console.WriteLine("What is your last name?");
+            lname = Console.ReadLine();
+
+            Console.WriteLine("What is your favorite number");
+            favnumb = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("What is your favorite animal?");
+            favan = Console.ReadLine();
+
+
+            if (favnumb > 10)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
+            if (favnumb < 5)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+            }
+
+            Console.WriteLine($"Hello {fname} {lname}! Your favorite number is {favnumb} and your favorite animal is {favan}!");
+
         }
     }
 }
